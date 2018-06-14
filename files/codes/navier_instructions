@@ -1,0 +1,32 @@
+/*
+This code is the test code of the Stokes problem of the lid-driven cavity type for the following technical report
+
+Y. Qiu, M.B. van Gijzen, J.W. van Wingerden, M. Verhaegen, C. Vuik. Evaluation of Multilevel Sequentially Semiseparable Preconditioners on CFD Benchmark Problems Using IFISS. Technical Report 13-11, Delft Institute of Applied Mathematics, Delft University of Technology, 2013.
+
+*/
+
+This code studies the performance of the global MSSS preconditioner for the Navier-Stokes problem of the lid-driven cavity type. The system to be solved is the linearized Navier-Stokes at the 2nd step by the Newton method. The corresponding data has already been converted into the MSSS type from % the sparse type. This is not quite necessary since we can directly initialize all the data with MSSS stype at the beginning of assembling matrices from elements. The Jacobian matrix also has a MSSS matrix structure. This is proved in {J.K. Rice. Efficient Algorithms for Distributed Control: a Structured matrix Appproach. PhD thesis, Delft University of Technology, 2010.}. Since we have to compare the performance of the global MSSS preconditioner with the performance of the AMG and GMG method, we just convert all the matrices of sparse type to MSSS stype from IFISS to make it comptible.
+
+To reproduce the results for the test example, the MSSS computations libraries should also be added to the working path. The computational libraries can be fould in the following link
+
+http://ta.twi.tudelft.nl/nw/users/yueqiu/software.html
+
+msss_navier.m is the main file for the solution of linearized Navier-Stokes equation using the global MSSS preconditioner
+
+If you also want to test the performance of AMG method for such problems, you should also include IFISS in your working path. IFISS is available via the following website
+
+http://www.maths.manchester.ac.uk/~djs/ifiss/
+
+You can run such test examples for the Stokes flow directly from IFISS to test the performance of the block preconditioneers by the AMG and GMG method to compare with the global MSSS preconditioner
+
+If you would like to apply such computation techniques for solving similar problems by using the MSSS matrix computation libraries, please cite the technical report as following:
+
+@article{Qiu2015,
+      Title    = {Evaluation of Multilevel Sequentially Semiseparable Preconditioners on {CFD} Benchmark Problems Using Incompressible Flow and Iterative Solver Software},
+      author   = "Qiu, Yue and van Gijzen, Martin B. and van Wingerden, Jan-Willem and Verhaegen, Michel and Vuik, Cornelis",
+      Journal  = {Mathematical Methods in the Applied Sciences},
+      Year     = {2015},
+      volume   = {38},
+      doi      = {10.1002/mma.3416},
+      url = {http://dx.doi.org/10.1002/mma.3416}
+}

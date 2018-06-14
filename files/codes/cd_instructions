@@ -1,0 +1,38 @@
+/*
+This code is the test code of the convection-diffusion problem for the following technical report
+
+Y. Qiu, M.B. van Gijzen, J.W. van Wingerden, M. Verhaegen, C. Vuik. Evaluation of Multilevel Sequentially Semiseparable Preconditioners on CFD Benchmark Problems Using IFISS. Technical Report 13-11, Delft Institute of Applied Mathematics, Delft University of Technology, 2013.
+
+*/
+
+
+To reproduce the results for the test example, the MSSS computations libraries should also be added to the working path. The computational libraries can be fould in the following link
+
+http://ta.twi.tudelft.nl/nw/users/yueqiu/software.html
+
+cd_test_vis_2.m is the main file for the case that the viscosity parameter epsilon=1/200
+
+cd_test_vis_4.m is the main file for the case that the viscosity parameter epsilon=10^{-4}
+
+AMG.m is the algebraic multigrid method implemented in IFISS. 
+
+GMG.m is the geometric multigrid method implemented in IFISS. 
+
+If you also want to test the performance of AMG or GMG method for such problems, you should also include IFISS in your working path. IFISS is available via the following website
+
+http://www.maths.manchester.ac.uk/~djs/ifiss/
+
+You can also run such test example directly from IFISS to test the performance of the AMG and GMG method.
+
+If you would like to apply such computation techniques for solving similar problems by using the MSSS matrix computation libraries, please cite the technical report as following:
+
+@article{Qiu2015,
+      Title    = {Evaluation of Multilevel Sequentially Semiseparable Preconditioners on {CFD} Benchmark Problems Using Incompressible Flow and Iterative Solver Software},
+      author   = "Qiu, Yue and van Gijzen, Martin B. and van Wingerden, Jan-Willem and Verhaegen, Michel and Vuik, Cornelis",
+      Journal  = {Mathematical Methods in the Applied Sciences},
+      Year     = {2015},
+      volume   = {38},
+      doi      = {10.1002/mma.3416},
+      url = {http://dx.doi.org/10.1002/mma.3416}
+}
+ 

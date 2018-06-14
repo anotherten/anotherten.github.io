@@ -1,0 +1,23 @@
+If you want to apply MSSS matrix computations to your research, please feel free to play with it. 
+
+If you apply the MSSS global preconditioner for PDE-constrained optimization problems or other types of problems, please cite the following paper
+
+@article{Qiu2015a,
+        author   = "Qiu, Yue and van Gijzen, Martin B. and van Wingerden, Jan-Willem and Verhaegen, Michel and Vuik, Cornelis",
+        title    = {Efficient Preconditioners for {PDE}-Constrained Optimization Problems with a Multilevel Sequentially SemiSeparable Matrix Structure},
+        year     = {2015},
+        Journal  = {Electronic Transactions on Numerical Analysis},
+        note     = {Available at {\textcolor{magenta}{\tt http://ta.twi.tudelft.nl/nw/users/yueqiu/publications.html}}}
+}
+
+If you apply such methods to solve CFD problems, please cite the following paper,
+
+   @article{Qiu2015,
+        Title    = {Evaluation of Multilevel Sequentially Semiseparable Preconditioners on {CFD} Benchmark Problems Using Incompressible Flow and Iterative Solver Software},
+        author   = "Qiu, Yue and van Gijzen, Martin B. and van Wingerden, Jan-Willem and Verhaegen, Michel and Vuik, Cornelis",
+        Journal  = {Mathematical Methods in the Applied Sciences},
+        Year     = {2015},
+        volume   = {38},
+        doi      = {10.1002/mma.3416},
+        url = {http://dx.doi.org/10.1002/mma.3416}
+}
