@@ -1,8 +1,0 @@
-@techreport{TR_Qiu_2013a,
-      author = {Qiu, Y. and van Gijzen, Martin B. and van Wingerden, Jan-Willem and Verhaegen, M. and Vuik, C.},
-      institution = {Delft Institution of Applied Mathematics, Delft University of Technology},
-      title = {Evaluation of Multilevel Sequentially Semiseparable Preconditioners on {CFD} Benchmark Problems Using {IFISS}},
-      year = {2013},
-      number = {13-11},
-      note="{\tt http://ta.twi.tudelft.nl/nw/users/yueqiu/publications.html}"
- }
