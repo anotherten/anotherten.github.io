@@ -214,7 +214,7 @@ nav {
 
 #sidebar_container { 
   float: right;
-  width: 234px;
+  width: 300px;
   margin-top: 20px;
   background: transparent url(../images/menubar.png); 
   border-radius: 7px 7px 7px 7px;
@@ -226,7 +226,7 @@ nav {
 }
 
 .sidebar { 
-  width: 200px;
+  width: 280px;
   margin: 0 0 16px 0;
   padding: 0 15px 5px 13px;
 }
