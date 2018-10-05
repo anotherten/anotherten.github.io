@@ -117,13 +117,13 @@ ol li {
 .left { 
   float: left;
   width: auto;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .right { 
   float: right; 
   width: auto;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .center { 
@@ -263,7 +263,7 @@ nav {
 .content { 
   text-align: left;
   width: 1100px;
-  margin: 20px 0 15px 20px;
+  margin: 50px 0 15px 50px;
   float: left;
   font-size: 120%;
   padding: 14px 0 0 0;
