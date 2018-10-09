@@ -149,7 +149,7 @@ header {
 }
 
 #logo { 
-  width: 1600px;
+  width: 100%;
   height: 180px;
   background: transparent;
   color: #888;
@@ -201,12 +201,12 @@ nav {
 } 
 
 #menu_container { 
-  width: 1600px;
+  width: 100%;
   margin: 0 auto 0 auto;
 }
 
 #site_content { 
-  width: 1600px;
+  width: 100%;
   overflow: hidden;
   margin: 10px auto 0 auto;
   padding: 15px 0 25px 0;
@@ -395,7 +395,7 @@ table tr td {
 /* scroll to top */
 #scroll { 
   position: relative; 
-  width: 1600px;
+  width: 100%;
   margin: 0 auto;
   bottom: 15px; 
   right: 0;
