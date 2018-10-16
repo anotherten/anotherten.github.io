@@ -210,6 +210,7 @@ nav {
   margin: 10px auto 0 auto;
   padding: 15px 0 25px 0;
   text-shadow: 0 1px #FFF;
+  max-width:1200px;
 } 
 
 #sidebar_container { 
