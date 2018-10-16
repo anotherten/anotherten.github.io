@@ -394,7 +394,7 @@ table tr td {
 /* scroll to top */
 #scroll { 
   position: relative; 
-  width: 1600px;
+  width: 100%;
   margin: 0 auto;
   bottom: 15px; 
   right: 0;
