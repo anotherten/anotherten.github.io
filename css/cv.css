@@ -205,7 +205,7 @@ nav {
 }
 
 #site_content { 
-  width: 1600px;
+  width: 100%;
   overflow: hidden;
   margin: 10px auto 0 auto;
   padding: 15px 0 25px 0;
