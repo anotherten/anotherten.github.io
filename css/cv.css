@@ -144,7 +144,7 @@ ol li {
 
 header { 
   background: #444 url(../images/logo.jpg) repeat /*no-repeat*/;
-  height: 600px;
+  height: 500px;
 }
 
 #logo { 
@@ -262,7 +262,7 @@ nav {
 
 .content { 
   text-align: left;
-  width: 1100px;
+  width: 100%;
   margin: 50px 0 15px 50px;
   float: left;
   font-size: 120%;
@@ -283,7 +283,7 @@ nav {
 
 footer { 
   font: 100% 'Droid Sans', arial, sans-serif;
-  height: 125px;
+  height: 100px;
   padding: 28px 0 5px 0;
   text-align: center; 
   background: #3092B6;
