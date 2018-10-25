@@ -143,9 +143,9 @@ ol li {
 
 
 header { 
-  background: #444 url(../images/logo.jpg) no-repeat bottom;
+  background: #444 url(../images/logo.jpeg) no-repeat bottom;
   background-size:120%;
-  height: 350px;
+  height: 600px;
 }
 
 #logo { 
