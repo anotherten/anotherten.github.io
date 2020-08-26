@@ -18,6 +18,27 @@
 .pub-page-index .common-footer {
   background: rgba(239, 240, 244, 0.73);
 }
+.pub-page-index .content {
+  position: relative;
+}
+.pub-page-index .content .index-dot-decorate {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  z-index: 2;
+}
+.pub-page-index .content .dot-decorate-1 {
+  top: 74px;
+  right: -51px;
+}
+.pub-page-index .content .dot-decorate-2 {
+  top: 387px;
+  left: -98px;
+}
+.pub-page-index .content .dot-decorate-3 {
+  top: 1000px;
+  right: -51px;
+}
 .pub-page-index .content .pub-item {
   font-size: 0;
   padding-bottom: 20px;
