@@ -498,20 +498,19 @@
       if (dom) {
         dom.setAttribute('fix', scrollTop > 400)
       }
-      // const years = document.querySelectorAll('.events-list');
-      // let min = 9999999;
-      // let hash = '';
-      // years.forEach((item) => {
-      //   const temp = item.getBoundingClientRect();
-      //   if (temp.y > 0 && temp.y < min) {
-      //     min = temp.bottom;
-      //     hash = `#${item.id}`
-      //   }
-      // })
-      // if (hash) {
-      //   console.log('check', hash)
-      //   window.checkActive(hash)
-      // }
+      const years = document.querySelectorAll('.events-list');
+      let min = 9999999;
+      let hash = '';
+      years.forEach((item) => {
+        const temp = item.getBoundingClientRect();
+        if (temp.bottom > 0 && temp.bottom < min) {
+          min = temp.bottom;
+          hash = `#${item.previousElementSibling.id}`
+        }
+      })
+      if (hash) {
+        window.checkActive(hash)
+      }
     }
     window.checkActive = function (hash) {
       const items = document.querySelectorAll('.nav-item');
