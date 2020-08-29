@@ -44,7 +44,8 @@
   color: #ffffff;
   font-size: 32px;
   text-align: center;
-  line-height: 65px;
+  line-height: 60px;
+  letter-spacing: 3px;
 }
 .home-page-index .info .welcome-tip {
   height: 40px;
@@ -73,9 +74,12 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: rebeccapurple;
   margin-right: 35px;
   vertical-align: middle;
+}
+.home-page-index .info .profile-pages .profile-pages-item img {
+  width: 50px;
+  height: 50px;
 }
 .home-page-index .pohto-decorate {
   margin-left: 150px;
@@ -120,8 +124,11 @@
   font-size: 30px;
   line-height: 30px;
   padding: 0;
-  margin-bottom: 48px;
+  margin-bottom: 42px;
   color: #222222;
+}
+.home-page-index .about-me-content .about-me-title span {
+  display: inline-block;
 }
 .home-page-index .about-me-content .about-me-title::after {
   content: '';
@@ -129,7 +136,7 @@
   width: 70px;
   height: 6px;
   background: linear-gradient(270deg, #32c5ff 0%, #b620e0 100%, #ac2ce2 100%, #b620e0 100%);
-  margin-top: 13px;
+  margin-top: 20px;
 }
 .home-page-index .about-me-content p,
 .home-page-index .about-me-content li {
@@ -145,6 +152,7 @@
 }
 .home-page-index .interest-and-focuson .items-wrap {
   margin: 0;
+  max-width: 70%;
 }
 .home-page-index .interest-and-focuson .items-wrap li {
   list-style: none;

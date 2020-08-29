@@ -51,7 +51,8 @@
       color: rgba(255, 255, 255, 1);
       font-size: 32px;
       text-align: center;
-      line-height: 65px;
+      line-height: 60px;
+      letter-spacing: 3px;
     }
     .welcome-tip {
       height: 40px;
@@ -81,9 +82,12 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        background: rebeccapurple;
         margin-right: 35px;
         vertical-align: middle;
+        img {
+          width: 50px;
+          height: 50px;
+        }
       }
     }
   }
@@ -136,8 +140,11 @@
       font-size: 30px;
       line-height: 30px;
       padding: 0;
-      margin-bottom: 48px;
+      margin-bottom: 42px;
       color: #222222;
+      span {
+        display: inline-block;
+      }
       &::after {
         content: '';
         display: block;
@@ -150,7 +157,7 @@
           #ac2ce2 100%,
           #b620e0 100%
         );
-        margin-top: 13px;
+        margin-top: 20px;
       }
     }
     p,
@@ -170,6 +177,7 @@
     }
     .items-wrap {
       margin: 0;
+      max-width: 70%;
       li {
         list-style: none;
         display: inline-block;
