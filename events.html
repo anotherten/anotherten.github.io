@@ -491,55 +491,53 @@
   </div>
 </body>
 <script>
-  window.onload = function () {
-    window.handleNavClick = function (event) {
-      const name = event.target.tagName;
-      if (name === 'A') {
-        const target = document.getElementById(event.target.getAttribute('nav-id'))
-        if (target) {
-          const temp = target.getBoundingClientRect();
-          const scrollTarget = document.body.parentElement;
-          scrollTarget.scrollTo({ top: 450 + target.offsetTop - 80, behavior: 'smooth' })
-        }
+  window.handleNavClick = function (event) {
+    const name = event.target.tagName;
+    if (name === 'A') {
+      const target = document.getElementById(event.target.getAttribute('nav-id'))
+      if (target) {
+        const temp = target.getBoundingClientRect();
+        const scrollTarget = document.body.parentElement;
+        scrollTarget.scrollTo({ top: 450 + target.offsetTop - 80, behavior: 'smooth' })
       }
     }
-    window.checkNav = function () {
-      const scrollTop = document.body.parentElement.scrollTop;
-      const dom = document.getElementById("quickly-bar");
-      if (dom) {
-        dom.setAttribute('fix', scrollTop > 400)
-      }
-      const years = document.querySelectorAll('.events-list');
-      let min = 9999999;
-      let hash = '';
-      years.forEach(function (item) {
-        const temp = item.getBoundingClientRect();
-        if (temp.bottom > 100 && temp.bottom < min) {
-          min = temp.bottom;
-          hash = `${item.previousElementSibling.id}`
-        }
-      })
-      if (hash) {
-        window.checkActive(hash)
-      }
-    }
-    window.checkActive = function (hash) {
-      const items = document.querySelectorAll('.nav-item');
-      items.forEach(function (item) {
-        const isActive = hash === item.getAttribute('nav-id');
-        item.setAttribute('active', isActive)
-      })
-    }
-    window.addEventListener('scroll', function () {
-      clearTimeout(window.scrolltimer)
-      window.scrolltimer = setTimeout(function () {
-        window.checkNav();
-      }, 30);
-    })
-
-
-    window.checkNav();
   }
+  window.checkNav = function () {
+    const scrollTop = document.body.parentElement.scrollTop;
+    const dom = document.getElementById("quickly-bar");
+    if (dom) {
+      dom.setAttribute('fix', scrollTop > 400)
+    }
+    const years = document.querySelectorAll('.events-list');
+    let min = 9999999;
+    let hash = '';
+    years.forEach(function (item) {
+      const temp = item.getBoundingClientRect();
+      if (temp.bottom > 100 && temp.bottom < min) {
+        min = temp.bottom;
+        hash = `${item.previousElementSibling.id}`
+      }
+    })
+    if (hash) {
+      window.checkActive(hash)
+    }
+  }
+  window.checkActive = function (hash) {
+    const items = document.querySelectorAll('.nav-item');
+    items.forEach(function (item) {
+      const isActive = hash === item.getAttribute('nav-id');
+      item.setAttribute('active', isActive)
+    })
+  }
+  window.addEventListener('scroll', function () {
+    clearTimeout(window.scrolltimer)
+    window.scrolltimer = setTimeout(function () {
+      window.checkNav();
+    }, 30);
+  })
+
+
+  window.checkNav();
 
 </script>
 
