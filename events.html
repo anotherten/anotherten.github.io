@@ -512,7 +512,7 @@
       const years = document.querySelectorAll('.events-list');
       let min = 9999999;
       let hash = '';
-      years.forEach((item) => {
+      years.forEach(function (item) {
         const temp = item.getBoundingClientRect();
         if (temp.bottom > 100 && temp.bottom < min) {
           min = temp.bottom;
@@ -525,14 +525,14 @@
     }
     window.checkActive = function (hash) {
       const items = document.querySelectorAll('.nav-item');
-      items.forEach((item) => {
+      items.forEach(function (item) {
         const isActive = hash === item.getAttribute('nav-id');
         item.setAttribute('active', isActive)
       })
     }
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', function () {
       clearTimeout(window.scrolltimer)
-      window.scrolltimer = setTimeout(() => {
+      window.scrolltimer = setTimeout(function () {
         window.checkNav();
       }, 30);
     })
