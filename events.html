@@ -509,7 +509,7 @@
     }
   }
   window.checkNav = function () {
-    const scrollTop = document.body.parentElement.scrollTop;
+    const scrollTop = document.body.parentElement.scrollTop || document.body.scrollTop;
     const dom = document.getElementById("quickly-bar");
     if (dom) {
       dom.setAttribute('fix', scrollTop > 400)
