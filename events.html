@@ -498,6 +498,12 @@
       if (target) {
         const temp = target.getBoundingClientRect();
         const scrollTarget = document.body.parentElement;
+        if (!scrollTarget.scrollTo) {
+          Element.prototype.scrollTo = function (option) {
+            this.scrollLeft = option.left;
+            this.scrollTop = option.top;
+          };
+        }
         scrollTarget.scrollTo({ top: 450 + target.offsetTop - 80, behavior: 'smooth' })
       }
     }
