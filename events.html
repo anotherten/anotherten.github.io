@@ -30,17 +30,17 @@
     </header>
     <div id="site_content">
       <div class="content">
-        <div class="quickly-nav-bar" id="quickly-bar">
-          <a href="#2020" class="nav-item">2020</a>
-          <a href="#2019" class="nav-item">2019</a>
-          <a href="#2018" class="nav-item">2018</a>
-          <a href="#2017" class="nav-item">2017</a>
-          <a href="#2016" class="nav-item">2016</a>
-          <a href="#2015" class="nav-item">2015</a>
-          <a href="#2014" class="nav-item">2014</a>
-          <a href="#2013" class="nav-item">2013</a>
-          <a href="#2012" class="nav-item">2012</a>
-          <a href="#2011" class="nav-item">2011</a>
+        <div class="quickly-nav-bar" id="quickly-bar" onclick="handleNavClick(event)">
+          <a nav-id="2020" class="nav-item">2020</a>
+          <a nav-id="2019" class="nav-item">2019</a>
+          <a nav-id="2018" class="nav-item">2018</a>
+          <a nav-id="2017" class="nav-item">2017</a>
+          <a nav-id="2016" class="nav-item">2016</a>
+          <a nav-id="2015" class="nav-item">2015</a>
+          <a nav-id="2014" class="nav-item">2014</a>
+          <a nav-id="2013" class="nav-item">2013</a>
+          <a nav-id="2012" class="nav-item">2012</a>
+          <a nav-id="2011" class="nav-item">2011</a>
         </div>
 
         <p class="events-line-title">
@@ -492,6 +492,17 @@
 </body>
 <script>
   window.onload = function () {
+    window.handleNavClick = function (event) {
+      const name = event.target.tagName;
+      if (name === 'A') {
+        const target = document.getElementById(event.target.getAttribute('nav-id'))
+        if (target) {
+          const temp = target.getBoundingClientRect();
+          const scrollTarget = document.body.parentElement;
+          scrollTarget.scrollTo({ top: 450 + target.offsetTop - 80, behavior: 'smooth' })
+        }
+      }
+    }
     window.checkNav = function () {
       const scrollTop = document.body.parentElement.scrollTop;
       const dom = document.getElementById("quickly-bar");
@@ -503,9 +514,9 @@
       let hash = '';
       years.forEach((item) => {
         const temp = item.getBoundingClientRect();
-        if (temp.bottom > 0 && temp.bottom < min) {
+        if (temp.bottom > 100 && temp.bottom < min) {
           min = temp.bottom;
-          hash = `#${item.previousElementSibling.id}`
+          hash = `${item.previousElementSibling.id}`
         }
       })
       if (hash) {
@@ -515,20 +526,19 @@
     window.checkActive = function (hash) {
       const items = document.querySelectorAll('.nav-item');
       items.forEach((item) => {
-        const isActive = hash === item.getAttribute('href');
+        const isActive = hash === item.getAttribute('nav-id');
         item.setAttribute('active', isActive)
       })
     }
     window.addEventListener('scroll', () => {
-      window.checkNav();
+      clearTimeout(window.scrolltimer)
+      window.scrolltimer = setTimeout(() => {
+        window.checkNav();
+      }, 30);
     })
 
-    window.addEventListener('hashchange', () => {
-      window.checkActive(location.hash);
-    })
 
     window.checkNav();
-    window.checkActive(location.hash);
   }
 
 </script>

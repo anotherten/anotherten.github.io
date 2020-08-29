@@ -23,6 +23,18 @@ body {
 }
 .sf-menu {
   float: unset !important;
+  display: block;
+  position: relative;
+  font-size: 0;
+}
+.sf-menu a {
+  display: block;
+  position: relative;
+  padding: 0 !important;
+  font-size: 20px;
+  text-shadow: none !important;
+  margin: 0 60px 0 0 !important;
+  text-decoration-line: none !important;
 }
 .sf-menu li {
   float: none !important;

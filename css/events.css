@@ -35,21 +35,24 @@
   background: linear-gradient(270deg, #fdab3e 0%, #fe3546 100%);
   box-shadow: 0px 2px 10px 7px rgba(0, 0, 0, 0.06);
   border: 1px solid #fd7042;
-  width: 120px;
-  border-radius: 10px;
+  width: 90px;
+  border-radius: 20px;
   transform: translateY(0%);
 }
 .events-page-index .content .quickly-nav-bar a:first-child {
   margin-top: 8px;
+  border-radius: 10px 10px 0 0;
 }
 .events-page-index .content .quickly-nav-bar a:last-child {
   margin-bottom: 8px;
+  border-radius: 0px 0px 10px 10px;
 }
 .events-page-index .content .quickly-nav-bar a {
+  cursor: pointer;
   display: block;
   text-align: center;
   height: 40px;
-  line-height: 51px;
+  line-height: 40px;
   background: white;
   font-size: 30px;
   color: #222;
@@ -202,4 +205,14 @@
 .events-page-index .common-footer {
   margin-top: 30px;
   background: rgba(239, 240, 244, 0.73);
+}
+@media only screen and (max-width: 600px) {
+  #quickly-bar {
+    display: none;
+  }
+}
+@media only screen and (max-height: 600px) {
+  #quickly-bar {
+    display: none;
+  }
 }

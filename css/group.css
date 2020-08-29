@@ -109,6 +109,7 @@
   line-height: 20px;
   padding: 0;
   margin-bottom: 40px;
+  white-space: nowrap;
 }
 .group-page-index .contact-info .phone-address-wrap p::before {
   content: '';
