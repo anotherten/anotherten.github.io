@@ -497,7 +497,7 @@
       const target = document.getElementById(event.target.getAttribute('nav-id'))
       if (target) {
         const temp = target.getBoundingClientRect();
-        const scrollTarget = document.body.parentElement;
+        const scrollTarget = navigator.userAgent.toLowerCase().indexOf('edge') > -1 ? document.body : document.body.parentElement;
         if (!scrollTarget.scrollTo) {
           Element.prototype.scrollTo = function (option) {
             this.scrollLeft = option.left;
