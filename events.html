@@ -511,23 +511,25 @@
     const years = document.querySelectorAll('.events-list');
     let min = 9999999;
     let hash = '';
-    years.forEach(function (item) {
+    for (let i = 0; i < years.length; i++) {
+      const item = years[i]
       const temp = item.getBoundingClientRect();
       if (temp.bottom > 100 && temp.bottom < min) {
         min = temp.bottom;
         hash = item.previousElementSibling.id;
       }
-    })
+    }
     if (hash) {
       window.checkActive(hash)
     }
   }
   window.checkActive = function (hash) {
     const items = document.querySelectorAll('.nav-item');
-    items.forEach(function (item) {
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i]
       const isActive = hash === item.getAttribute('nav-id');
       item.setAttribute('active', isActive)
-    })
+    }
   }
   window.addEventListener('scroll', function () {
     clearTimeout(window.scrolltimer)
