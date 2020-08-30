@@ -54,7 +54,7 @@
   height: 40px;
   line-height: 40px;
   background: white;
-  font-size: 30px;
+  font-size: 20px;
   color: #222;
   margin-bottom: 1px;
   text-decoration: none;
@@ -65,7 +65,6 @@
   position: relative;
 }
 .events-page-index .content .quickly-nav-bar .nav-item[active='true']::after {
-  content: '';
   width: 0;
   height: 0;
   position: absolute;
@@ -79,9 +78,9 @@
 }
 .events-page-index .content .year-wrap .year-tip {
   display: inline-block;
-  width: 88px;
-  height: 88px;
-  line-height: 88px;
+  width: 74px;
+  height: 74px;
+  line-height: 74px;
   text-align: center;
   font-size: 20px;
   background: linear-gradient(270deg, #fdab3e 0%, #fe3546 100%);
@@ -92,12 +91,13 @@
 .events-page-index .content .year-wrap .year-tip span {
   position: relative;
   z-index: 2;
+  font-weight: 700;
 }
 .events-page-index .content .year-wrap .year-tip::after {
   content: '';
   position: absolute;
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background: white;
   top: 50%;
@@ -105,7 +105,7 @@
   transform: translate(-50%, -50%);
 }
 .events-page-index .content .year-wrap .events-list {
-  margin-left: 44px;
+  margin-left: 37px;
   padding-left: 32px;
   border-left: solid 1px #d8d8d8;
   padding-top: 30px;
@@ -167,7 +167,7 @@
   padding: 0;
 }
 .events-page-index .content .events-line-title {
-  font-size: 50px;
+  font-size: 40px;
   line-height: 40px;
   padding: 0;
   margin: 0 0 70px 0;
@@ -184,12 +184,12 @@
   width: 30px;
   height: 30px;
   position: absolute;
-  top: -10px;
+  top: -7px;
   left: 50%;
   z-index: 1;
   border-radius: 50%;
   background: linear-gradient(270deg, #fdab3e 0%, #fe3546 100%);
-  margin-left: 96px;
+  margin-left: 76px;
 }
 .events-page-index #site_content {
   margin: 0;
