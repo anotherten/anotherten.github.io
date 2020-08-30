@@ -85,7 +85,7 @@ a,
 a:hover {
   outline: none;
   text-decoration: none;
-  color: #58b5d6;
+  color: #0366d6;
 }
 
 a:hover {
@@ -563,7 +563,7 @@ ul#nav li a {
   padding: 5px 20px 6px 20px;
 
   text-decoration: none;
-  color: #fff;
+  color: #c9c2c2;
   margin-right: 2px;
 }
 

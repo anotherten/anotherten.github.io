@@ -27,14 +27,21 @@ body {
   position: relative;
   font-size: 0;
 }
+.sf-menu a.active {
+  color: white !important;
+}
 .sf-menu a {
   display: block;
   position: relative;
   padding: 0 !important;
-  font-size: 20px;
+  font-size: 18px !important;
   text-shadow: none !important;
   margin: 0 60px 0 0 !important;
   text-decoration-line: none !important;
+}
+.sf-menu a:hover {
+  color: white !important;
+  position: relative;
 }
 .sf-menu li {
   float: none !important;

@@ -19,33 +19,30 @@
 .home-page-index header {
   position: relative;
   background: none !important;
-  height: 600px;
+  height: 500px;
   overflow: hidden;
 }
 .home-page-index .top-header-bg {
   position: absolute;
   left: 0;
   width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  min-height: 600px;
+  bottom: 0;
+  min-height: 500px;
 }
 .home-page-index .info {
   position: relative;
   margin-left: 130px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .home-page-index .info .owner {
-  width: 240px;
-  height: 60px;
-  background: linear-gradient(251deg, #32c5ff 0%, #b620e0 100%, #ac2ce2 100%, #b620e0 100%);
+  background: linear-gradient(270deg, #fdab3e 0%, #fe3546 100%);
   border-radius: 12px;
-  padding: 0;
+  line-height: 20px;
+  padding: 12px 20px;
   color: #ffffff;
-  font-size: 32px;
+  font-size: 24px;
   text-align: center;
-  line-height: 60px;
-  letter-spacing: 3px;
+  display: inline-block;
 }
 .home-page-index .info .welcome-tip {
   height: 40px;
@@ -54,7 +51,7 @@
   color: #ffffff;
   line-height: 40px;
   padding: 0;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .home-page-index .info .profile {
   width: 485px;
@@ -80,9 +77,15 @@
 .home-page-index .info .profile-pages .profile-pages-item img {
   width: 50px;
   height: 50px;
+  transition: all 0.6s ease;
+  display: inline-block;
+}
+.home-page-index .info .profile-pages .profile-pages-item img:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 4px 14px 6px rgba(82, 92, 108, 0.16);
 }
 .home-page-index .pohto-decorate {
-  margin-left: 150px;
+  margin-left: 10%;
   margin-top: 85px;
   position: relative;
   display: inline-block;
@@ -93,7 +96,7 @@
   position: absolute;
   width: 350px;
   height: 435px;
-  background: linear-gradient(262deg, #32c5ff 0%, #b620e0 100%, #ac2ce2 100%, #b620e0 100%);
+  background: #f1f1f2;
   border-radius: 5px;
   top: -25px;
   left: -20px;
@@ -115,17 +118,18 @@
 .home-page-index .about-me-content {
   display: inline-block;
   vertical-align: top;
-  width: calc(100% - 518px - 100px - 50px);
+  width: calc(100% - 368px - 100px - 20%);
   padding-top: 70px;
   padding-left: 100px;
-  padding-right: 50px;
+  padding-right: 10%;
 }
 .home-page-index .about-me-content .about-me-title {
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 24px;
+  line-height: 24px;
   padding: 0;
-  margin-bottom: 42px;
+  margin-bottom: 32px;
   color: #222222;
+  font-weight: 500;
 }
 .home-page-index .about-me-content .about-me-title span {
   display: inline-block;
@@ -135,7 +139,7 @@
   display: block;
   width: 70px;
   height: 6px;
-  background: linear-gradient(270deg, #32c5ff 0%, #b620e0 100%, #ac2ce2 100%, #b620e0 100%);
+  background: linear-gradient(270deg, #fdab3e 0%, #fe3546 100%);
   margin-top: 20px;
 }
 .home-page-index .about-me-content p,
@@ -152,7 +156,7 @@
 }
 .home-page-index .interest-and-focuson .items-wrap {
   margin: 0;
-  max-width: 70%;
+  max-width: 90%;
 }
 .home-page-index .interest-and-focuson .items-wrap li {
   list-style: none;
@@ -169,6 +173,7 @@
   background-image: url(../images/search-item-icon.png);
   vertical-align: middle;
   margin-right: 6px;
+  background-size: 100% 100%;
 }
 .home-page-index .useful-links {
   background: rgba(239, 240, 244, 0.73);
@@ -181,9 +186,9 @@
   top: -75px;
 }
 .home-page-index .useful-links .useful-link-tip {
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   color: #222;
   line-height: 1;
   padding: 0;
@@ -197,14 +202,14 @@
 .home-page-index .useful-links .useful-link-tip::after {
   content: '';
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: linear-gradient(270deg, #fdab3e 0%, #fe3546 100%);
   position: absolute;
   left: 50%;
   top: -8px;
-  margin-left: 64px;
+  margin-left: 63px;
 }
 .home-page-index .useful-links .links-wrap {
   margin: 0;
